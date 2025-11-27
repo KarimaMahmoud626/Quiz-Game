@@ -67,7 +67,7 @@ class _SplashBodyState extends State<SplashBody>
   }
 
   void goToNextView() {
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(Duration(seconds: 1), () {
       Get.to(() => QuizTypeScreen(), transition: Transition.fade);
     });
   }
