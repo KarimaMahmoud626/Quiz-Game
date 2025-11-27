@@ -8,9 +8,14 @@ environment:
 
 dependencies:
   cloud_firestore: ^6.0.1
+  dartz: ^0.10.1
+  equatable: ^2.0.7
   firebase_core: ^4.1.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.1
+  font_awesome_icon_class: ^0.0.6
+  get: ^4.7.2
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -19,3 +24,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
