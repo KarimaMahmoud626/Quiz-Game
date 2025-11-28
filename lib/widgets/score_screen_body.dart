@@ -76,7 +76,7 @@ class ScoreScreenBody extends StatelessWidget {
                 ),
                 SizedBox(height: SizeConfig.defaultSize! * 4),
                 CustomTextButton(
-                  text: 'Play Again',
+                  text: 'اللعب مجددًا',
                   onTap: () {
                     Get.to(() => QuizTypeScreen());
                     context.read<QuizCubit>().restartQuiz();
@@ -84,7 +84,7 @@ class ScoreScreenBody extends StatelessWidget {
                 ),
                 SizedBox(height: SizeConfig.defaultSize! * 2),
                 CustomTextButton(
-                  text: 'Go Home',
+                  text: '🏠',
                   onTap: () {
                     Get.to(() => SplashScreen());
                     context.read<QuizCubit>().restartQuiz();

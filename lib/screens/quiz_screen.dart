@@ -19,7 +19,7 @@ class QuizScreen extends StatelessWidget {
           (context) => QuizCubit(FirestoreService())..fetchQuestions(quizType),
       child: Scaffold(
         backgroundColor: AppColors.primaryDark,
-        body: QuizScreenBody(),
+        body: QuizScreenBody(quizType: quizType),
       ),
     );
   }

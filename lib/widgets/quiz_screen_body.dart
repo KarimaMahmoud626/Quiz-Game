@@ -13,7 +13,9 @@ import 'package:quiz_game/widgets/question_card.dart';
 import 'package:quiz_game/widgets/score_card.dart';
 
 class QuizScreenBody extends StatelessWidget {
-  const QuizScreenBody({super.key});
+  const QuizScreenBody({super.key, required this.quizType});
+
+  final String quizType;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,7 @@ class QuizScreenBody extends StatelessWidget {
                               "السؤال ${state.currentIndex + 1} من ${state.questions.length}",
                           questionText:
                               state.questions[state.currentIndex].questionBody,
-                          quizTitle: 'اسئلة عامة',
+                          quizTitle: 'اسئلة  $quizType',
                           timerSeconds: state.timerSeconds,
                           progress: state.progress,
                         )
@@ -104,7 +106,7 @@ class QuizScreenBody extends StatelessWidget {
                 child:
                     (state is QuizLoaded)
                         ? ScoreCard(score: state.score)
-                        : ScoreCard(),
+                        : ScoreCard(score: 0),
               ),
             ],
           );
